@@ -1,0 +1,6 @@
+{
+  "rewrites": [
+    { "source": "/checker", "destination": "/" },
+    { "source": "/checker/(.*)", "destination": "/" }
+  ]
+}

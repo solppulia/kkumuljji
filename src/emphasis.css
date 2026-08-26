@@ -1,0 +1,12 @@
+/* 강조 레슨에서 두 문법의 차이가 미리보기에서도 분명하게 보이도록 합니다. */
+.preview em {
+  display: inline-block;
+  color: #5f4bb4;
+  font-style: normal;
+  transform: skewX(-10deg);
+}
+
+.preview strong {
+  color: #34303f;
+  font-weight: 800;
+}

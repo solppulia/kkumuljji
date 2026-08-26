@@ -1,0 +1,10 @@
+/* 데스크톱은 두 패널을 함께 비교하고, 모바일에서만 탭으로 전환합니다. */
+.editor-tabs {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .editor-tabs {
+    display: flex;
+  }
+}
