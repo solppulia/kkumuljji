@@ -2,6 +2,7 @@ import { useCallback, useState } from "react";
 import { AlertTriangle, ChevronDown, Clipboard, FileImage, Info, LoaderCircle, LockKeyhole, RotateCcw, ShieldCheck, Sparkles, UploadCloud } from "lucide-react";
 import { createC2pa } from "@contentauth/c2pa-web/inline";
 import exifr from "exifr";
+import Home from "./Home";
 import Mentoring from "./Mentoring";
 import "./checker.css";
 
@@ -45,4 +46,9 @@ function Checker() {
     <section className="how-section"><div className="how-mascot"><img src={`${import.meta.env.BASE_URL}assets/kkumuljji/study.png`} alt="공부하는 꾸물찌" /></div><div><p className="checker-kicker">HOW TO READ</p><h2>이 도구가 말해주는 것</h2></div><div className="how-grid"><div><span>01</span><h3>파일 안의 출처 정보</h3><p>C2PA가 있다고 해서 AI라는 뜻은 아닙니다. manifest 안의 assertion과 source type을 함께 살핍니다.</p></div><div><span>02</span><h3>vendor-neutral 검사</h3><p>Canva는 가능한 출처 중 하나일 뿐입니다. 다양한 provider와 알 수 없는 출처도 확인합니다.</p></div><div><span>03</span><h3>로컬 분석</h3><p>이미지는 서버로 전송되지 않습니다. 선택한 파일은 현재 브라우저 안에서만 처리됩니다.</p></div></div></section>
     </main><footer className="checker-footer"><span>AI Label Checker</span><span>파일 내부의 provenance만 검사합니다.</span></footer><div className={`scan-toast ${toast ? "show" : ""}`} role="status"><Sparkles size={16} /> 검사 완료했어요. 아래 결과를 확인해주세요.</div></div>;
 }
-export default function App() { return window.location.pathname.endsWith("/checker") || window.location.hash === "#/checker" ? <Checker /> : <Mentoring />; }
+export default function App() {
+  const path = window.location.pathname;
+  if (path.endsWith("/checker") || window.location.hash === "#/checker") return <Checker />;
+  if (path.endsWith("/mentoring") || window.location.hash === "#/mentoring") return <Mentoring />;
+  return <Home />;
+}
