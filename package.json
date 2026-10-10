@@ -6,8 +6,7 @@
   "packageManager": "pnpm@11.22.0",
   "scripts": {
     "dev": "vite",
-    "build": "tsc -b && vite build && node scripts/build-legal.mjs",
-    "build:draft": "tsc -b && vite build && node scripts/build-legal.mjs --draft",
+    "build": "tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {

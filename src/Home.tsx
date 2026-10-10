@@ -57,7 +57,7 @@ export default function Home() {
         <section className="home-note"><img src={`${base}assets/kkumuljji/idea.png`} alt="아이디어를 떠올리는 꾸물찌" /><p>정답을 찾는 것보다<br /><b>직접 올려보고 알아가는 과정</b>을 믿어요.</p></section>
       </main>
 
-      <footer className="home-footer"><span>KKUMULJJI LAB</span><span>작은 실험이 큰 변화를 만들어요.</span><span><a href={`${import.meta.env.BASE_URL}privacy/`}>Tools 개인정보처리방침</a> · <a href={`${import.meta.env.BASE_URL}data-deletion/`}>데이터 삭제 안내</a></span></footer>
+      <footer className="home-footer"><span>KKUMULJJI LAB</span><span>작은 실험이 큰 변화를 만들어요.</span></footer>
     </div>
   );
 }
